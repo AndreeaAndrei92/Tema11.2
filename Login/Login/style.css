@@ -1,0 +1,62 @@
+﻿html, body, .grid-container {
+    height: 100%;
+    margin: 0;
+}
+
+    .grid-container * {
+        position: relative;
+    }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 40% 10% 10% 40%;
+    grid-template-rows: 25% 15% 15% 15%;
+    grid-template-areas: ". . . ." ". login-form-section login-form-section ." ". login-form-section login-form-section ." ". . . .";
+    background-color: white;
+}
+
+.login-form-section {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "login-form-title-section login-form-title-section" "username-label-section username-input-section" "password-label-section password-input-section" "login-button-section login-button-section" "remember-me-section remember-me-section" "forgot-password-button-section forgot-password-button-section";
+    grid-area: login-form-section;
+    background-color: white;
+    padding: 10px;
+}
+
+.login-form-title-section {
+    grid-area: login-form-title-section;
+    text-align: center;
+}
+
+.username-label-section {
+    grid-area: username-label-section;
+}
+
+.username-input-section {
+    grid-area: username-input-section;
+}
+
+.password-label-section {
+    grid-area: password-label-section;
+}
+
+.password-input-section {
+    grid-area: password-input-section;
+}
+
+.login-button-section {
+    grid-area: login-button-section;
+    text-align: center;
+}
+
+.remember-me-section {
+    grid-area: remember-me-section;
+    text-align: center;
+}
+
+.forgot-password-button-section {
+    grid-area: forgot-password-button-section;
+    text-align: center;
+}
